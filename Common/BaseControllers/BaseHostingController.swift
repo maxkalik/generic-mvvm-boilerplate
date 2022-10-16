@@ -8,8 +8,11 @@
 import UIKit
 import SwiftUI
 
-open class BaseHostingController<ViewModel: BaseViewModel, ContentView: View>: UIHostingController<ContentView>, BaseController {
+open class BaseHostingController<
+    ViewModel: BaseViewModel,
+    ContentView: View>: UIHostingController<ContentView>, BaseController {
 
+    public lazy var progressView = ProgressView()
     public var viewModel: ViewModel
 
     public init(viewModel: ViewModel, rootView: ContentView) {
@@ -20,5 +23,14 @@ open class BaseHostingController<ViewModel: BaseViewModel, ContentView: View>: U
     @objc
     required dynamic public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        print("DEINIT \(self)")
+    }
+
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        progressView.center = view.center
     }
 }

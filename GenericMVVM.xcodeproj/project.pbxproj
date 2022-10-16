@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1125D17F28FC4792000E1AB5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D17E28FC4792000E1AB5 /* ProgressView.swift */; };
+		1125D18228FC47F8000E1AB5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D18128FC47F8000E1AB5 /* AppCoordinator.swift */; };
+		1125D18528FC486D000E1AB5 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D18428FC486D000E1AB5 /* AppDependencies.swift */; };
+		1125D18828FC48A1000E1AB5 /* AppServiceOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D18728FC48A1000E1AB5 /* AppServiceOne.swift */; };
+		1125D18A28FC48A7000E1AB5 /* AppServiceTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D18928FC48A7000E1AB5 /* AppServiceTwo.swift */; };
+		1125D19028FC50F6000E1AB5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D18F28FC50F6000E1AB5 /* HomeViewController.swift */; };
+		1125D19328FC510A000E1AB5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D19228FC510A000E1AB5 /* HomeViewModel.swift */; };
+		1125D19728FC5137000E1AB5 /* SecondaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D19628FC5137000E1AB5 /* SecondaryViewModel.swift */; };
+		1125D19928FC539E000E1AB5 /* SecondaryHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D19828FC539E000E1AB5 /* SecondaryHostingController.swift */; };
+		1125D19B28FC53B0000E1AB5 /* SecondaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D19A28FC53B0000E1AB5 /* SecondaryView.swift */; };
+		1125D19E28FC6513000E1AB5 /* BaseViewModelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D19D28FC6513000E1AB5 /* BaseViewModelViewDelegate.swift */; };
+		1125D1A028FC6530000E1AB5 /* BaseViewModelCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D19F28FC6530000E1AB5 /* BaseViewModelCoordinatorDelegate.swift */; };
+		1125D1A228FC6C09000E1AB5 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125D1A128FC6C09000E1AB5 /* BaseButton.swift */; };
 		1175DA4428FB593E00502779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1175DA4328FB593E00502779 /* AppDelegate.swift */; };
 		1175DA4628FB593E00502779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1175DA4528FB593E00502779 /* SceneDelegate.swift */; };
 		1175DA4828FB593E00502779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1175DA4728FB593E00502779 /* ViewController.swift */; };
@@ -76,6 +89,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1125D17E28FC4792000E1AB5 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		1125D18128FC47F8000E1AB5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1125D18428FC486D000E1AB5 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		1125D18728FC48A1000E1AB5 /* AppServiceOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceOne.swift; sourceTree = "<group>"; };
+		1125D18928FC48A7000E1AB5 /* AppServiceTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceTwo.swift; sourceTree = "<group>"; };
+		1125D18F28FC50F6000E1AB5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1125D19228FC510A000E1AB5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1125D19628FC5137000E1AB5 /* SecondaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryViewModel.swift; sourceTree = "<group>"; };
+		1125D19828FC539E000E1AB5 /* SecondaryHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryHostingController.swift; sourceTree = "<group>"; };
+		1125D19A28FC53B0000E1AB5 /* SecondaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryView.swift; sourceTree = "<group>"; };
+		1125D19D28FC6513000E1AB5 /* BaseViewModelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelViewDelegate.swift; sourceTree = "<group>"; };
+		1125D19F28FC6530000E1AB5 /* BaseViewModelCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		1125D1A128FC6C09000E1AB5 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		1175DA4128FB593E00502779 /* AppOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1175DA4328FB593E00502779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1175DA4528FB593E00502779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +156,145 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1125D17728FC465B000E1AB5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1175DA4328FB593E00502779 /* AppDelegate.swift */,
+				1175DA4528FB593E00502779 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1125D17828FC466F000E1AB5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1175DA4C28FB593E00502779 /* Assets.xcassets */,
+				1175DA4E28FB593E00502779 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1125D17928FC4678000E1AB5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1125D18C28FC4F8D000E1AB5 /* Secondary */,
+				1125D18B28FC4F87000E1AB5 /* Home */,
+				1175DA4728FB593E00502779 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1125D17A28FC4699000E1AB5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1175DA5F28FB595900502779 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1125D17B28FC469C000E1AB5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1175DA6428FB595900502779 /* Assets.xcassets */,
+				1175DA6628FB595900502779 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1125D17C28FC46A0000E1AB5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1175DA5B28FB595900502779 /* AppDelegate.swift */,
+				1175DA5D28FB595900502779 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1125D17D28FC477B000E1AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1125D17E28FC4792000E1AB5 /* ProgressView.swift */,
+				1125D1A128FC6C09000E1AB5 /* BaseButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1125D18028FC47D9000E1AB5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1125D18128FC47F8000E1AB5 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1125D18328FC4862000E1AB5 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				1125D18428FC486D000E1AB5 /* AppDependencies.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		1125D18628FC4893000E1AB5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1125D18728FC48A1000E1AB5 /* AppServiceOne.swift */,
+				1125D18928FC48A7000E1AB5 /* AppServiceTwo.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1125D18B28FC4F87000E1AB5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1125D18E28FC50E1000E1AB5 /* Views */,
+				1125D18D28FC50DC000E1AB5 /* ViewModels */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1125D18C28FC4F8D000E1AB5 /* Secondary */ = {
+			isa = PBXGroup;
+			children = (
+				1125D19528FC512A000E1AB5 /* ViewModels */,
+				1125D19428FC5127000E1AB5 /* Views */,
+			);
+			path = Secondary;
+			sourceTree = "<group>";
+		};
+		1125D18D28FC50DC000E1AB5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1125D19228FC510A000E1AB5 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1125D18E28FC50E1000E1AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1125D18F28FC50F6000E1AB5 /* HomeViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1125D19428FC5127000E1AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1125D19828FC539E000E1AB5 /* SecondaryHostingController.swift */,
+				1125D19A28FC53B0000E1AB5 /* SecondaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1125D19528FC512A000E1AB5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1125D19628FC5137000E1AB5 /* SecondaryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		1175DA1D28FB58FA00502779 = {
 			isa = PBXGroup;
 			children = (
@@ -154,11 +319,12 @@
 		1175DA4228FB593E00502779 /* AppOne */ = {
 			isa = PBXGroup;
 			children = (
-				1175DA4328FB593E00502779 /* AppDelegate.swift */,
-				1175DA4528FB593E00502779 /* SceneDelegate.swift */,
-				1175DA4728FB593E00502779 /* ViewController.swift */,
-				1175DA4C28FB593E00502779 /* Assets.xcassets */,
-				1175DA4E28FB593E00502779 /* LaunchScreen.storyboard */,
+				1125D18628FC4893000E1AB5 /* Services */,
+				1125D18328FC4862000E1AB5 /* Dependencies */,
+				1125D18028FC47D9000E1AB5 /* Coordinator */,
+				1125D17928FC4678000E1AB5 /* Scenes */,
+				1125D17828FC466F000E1AB5 /* Resources */,
+				1125D17728FC465B000E1AB5 /* SupportingFiles */,
 				1175DA5128FB593E00502779 /* Info.plist */,
 			);
 			path = AppOne;
@@ -167,11 +333,9 @@
 		1175DA5A28FB595900502779 /* AppTwo */ = {
 			isa = PBXGroup;
 			children = (
-				1175DA5B28FB595900502779 /* AppDelegate.swift */,
-				1175DA5D28FB595900502779 /* SceneDelegate.swift */,
-				1175DA5F28FB595900502779 /* ViewController.swift */,
-				1175DA6428FB595900502779 /* Assets.xcassets */,
-				1175DA6628FB595900502779 /* LaunchScreen.storyboard */,
+				1125D17C28FC46A0000E1AB5 /* SupportingFiles */,
+				1125D17B28FC469C000E1AB5 /* Resources */,
+				1125D17A28FC4699000E1AB5 /* Scenes */,
 				1175DA6928FB595900502779 /* Info.plist */,
 			);
 			path = AppTwo;
@@ -180,6 +344,7 @@
 		1175DA7328FB59DF00502779 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1125D17D28FC477B000E1AB5 /* Views */,
 				1175DA8C28FC3A8300502779 /* BaseControllers */,
 				1175DA8528FC39A300502779 /* Protocols */,
 				1175DA8428FC38B800502779 /* Services */,
@@ -211,6 +376,8 @@
 				1175DA8828FC39ED00502779 /* Coordinator.swift */,
 				1175DA8A28FC3A6100502779 /* BaseViewModel.swift */,
 				1175DA9328FC3B8000502779 /* BaseController.swift */,
+				1125D19D28FC6513000E1AB5 /* BaseViewModelViewDelegate.swift */,
+				1125D19F28FC6530000E1AB5 /* BaseViewModelCoordinatorDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -370,9 +537,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1125D18828FC48A1000E1AB5 /* AppServiceOne.swift in Sources */,
+				1125D19328FC510A000E1AB5 /* HomeViewModel.swift in Sources */,
+				1125D18228FC47F8000E1AB5 /* AppCoordinator.swift in Sources */,
 				1175DA4828FB593E00502779 /* ViewController.swift in Sources */,
+				1125D19028FC50F6000E1AB5 /* HomeViewController.swift in Sources */,
+				1125D19B28FC53B0000E1AB5 /* SecondaryView.swift in Sources */,
 				1175DA4428FB593E00502779 /* AppDelegate.swift in Sources */,
+				1125D18A28FC48A7000E1AB5 /* AppServiceTwo.swift in Sources */,
+				1125D18528FC486D000E1AB5 /* AppDependencies.swift in Sources */,
 				1175DA4628FB593E00502779 /* SceneDelegate.swift in Sources */,
+				1125D19928FC539E000E1AB5 /* SecondaryHostingController.swift in Sources */,
+				1125D19728FC5137000E1AB5 /* SecondaryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,13 +566,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1125D1A228FC6C09000E1AB5 /* BaseButton.swift in Sources */,
 				1175DA8928FC39ED00502779 /* Coordinator.swift in Sources */,
 				1175DA8E28FC3B0300502779 /* BaseViewController.swift in Sources */,
+				1125D19E28FC6513000E1AB5 /* BaseViewModelViewDelegate.swift in Sources */,
+				1125D1A028FC6530000E1AB5 /* BaseViewModelCoordinatorDelegate.swift in Sources */,
 				1175DA9828FC3BBA00502779 /* CommonServiceTwo.swift in Sources */,
 				1175DA9428FC3B8000502779 /* BaseController.swift in Sources */,
 				1175DA9628FC3BA500502779 /* CommonServiceOne.swift in Sources */,
 				1175DA8728FC39DC00502779 /* Dependencies.swift in Sources */,
 				1175DA9028FC3B0C00502779 /* BaseNavigationController.swift in Sources */,
+				1125D17F28FC4792000E1AB5 /* ProgressView.swift in Sources */,
 				1175DA8B28FC3A6100502779 /* BaseViewModel.swift in Sources */,
 				1175DA9228FC3B2200502779 /* BaseHostingController.swift in Sources */,
 			);
@@ -681,6 +861,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -713,6 +894,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,7 +8,7 @@
 import UIKit
 
 public protocol Dependencies: HasCommonServiceOne,
-                       HasCommonServiceTwo
+                              HasCommonServiceTwo
 { }
 
 public protocol HasCommonServiceOne: AnyObject {
@@ -22,4 +22,6 @@ public protocol HasCommonServiceTwo: AnyObject {
 open class CommonDependencies: Dependencies {
     public lazy var commonServiceOne: CommonServiceOne = CommonServiceOneImpementation(dependencies: self)
     public lazy var commonServiceTwo: CommonServiceTwo = CommonServiceTwoImpementation(dependencies: self)
+    
+    public init() { }
 }

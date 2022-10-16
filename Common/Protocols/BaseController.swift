@@ -10,6 +10,7 @@ import UIKit
 public protocol BaseController: AnyObject {
     
     var view: UIView! { get set }
+    var progressView: ProgressView { get set }
     var navigationController: UINavigationController? { get }
     
     associatedtype ViewModel: BaseViewModel
@@ -21,10 +22,16 @@ public protocol BaseController: AnyObject {
 
 public extension BaseController {
     func showActivityIndicator() {
-        print("show activity indicator")
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.view.addSubview(self.progressView)
+        }
     }
     
     func hideActivityIndicator() {
-        print("hide activity indicator")
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.progressView.removeFromSuperview()
+        }
     }
 }

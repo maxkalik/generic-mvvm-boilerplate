@@ -9,6 +9,7 @@ import UIKit
 
 open class BaseViewController<ViewModel: BaseViewModel>: UIViewController, BaseController {
     
+    public lazy var progressView = ProgressView()
     public var viewModel: ViewModel
     
     public init(viewModel: ViewModel) {
@@ -18,5 +19,9 @@ open class BaseViewController<ViewModel: BaseViewModel>: UIViewController, BaseC
     
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        print("DEINIT \(self)")
     }
 }
