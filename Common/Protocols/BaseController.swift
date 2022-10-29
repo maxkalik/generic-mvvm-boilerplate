@@ -13,8 +13,8 @@ public protocol BaseController: AnyObject {
     var progressView: ProgressView { get set }
     var navigationController: UINavigationController? { get }
     
-    associatedtype ViewModel: BaseViewModel
-    var viewModel: ViewModel { get set }
+//    associatedtype ViewModel: BaseViewModel
+//    var viewModel: ViewModel { get set }
     
     func showActivityIndicator()
     func hideActivityIndicator()

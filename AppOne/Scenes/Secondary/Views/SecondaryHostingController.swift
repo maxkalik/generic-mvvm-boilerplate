@@ -8,12 +8,14 @@
 import SwiftUI
 import Common
 
-final class SecondaryHostingController<ViewModel: SecondaryViewModel>:
-    BaseHostingController<ViewModel, SecondaryView<ViewModel>> {
+final class SecondaryHostingController<ViewModel: SecondaryViewModel>: BaseHostingController<SecondaryView<ViewModel>> {
 
+    private let viewModel: ViewModel
+    
     init(viewModel: ViewModel) {
+        self.viewModel = viewModel
         let rootView = SecondaryView(viewModel: viewModel)
-        super.init(viewModel: viewModel, rootView: rootView)
+        super.init(rootView: rootView)
         viewModel.viewDelegate = self
     }
     

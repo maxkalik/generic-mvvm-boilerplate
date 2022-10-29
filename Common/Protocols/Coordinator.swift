@@ -22,7 +22,7 @@ public extension Coordinator {
         dependencies.commonServiceOne.commonServiceOneMethod()
     }
     
-    func show<ViewController: UIViewController & BaseController>(_ viewController: ViewController) {
+    func show<ViewController: UIViewController>(_ viewController: ViewController) {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

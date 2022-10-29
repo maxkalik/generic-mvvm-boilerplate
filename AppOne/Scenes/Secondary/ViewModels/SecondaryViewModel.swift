@@ -16,15 +16,17 @@ protocol SecondaryViewModelViewDelegate: BaseViewModelViewDelegate {
 
 // MARK: - View Model
 
-protocol SecondaryViewModel: ObservableObject, BaseViewModel  {
+protocol SecondaryViewModel: ObservableObject {
     var title: String { get }
     
     var viewDelegate: SecondaryViewModelViewDelegate? { get set }
+    
+    func viewDidLoad()
 }
 
 // MARK: - View Model Implementation
 
-final class SecondaryViewModelImplementation<Dependeincies: HasAppServiceTwo>: SecondaryViewModel {
+final class SecondaryViewModelImplementation<Dependeincies: HasAppServiceOne & HasAppServiceTwo>: SecondaryViewModel, BaseViewModel {
     
     weak var viewDelegate: SecondaryViewModelViewDelegate?
     

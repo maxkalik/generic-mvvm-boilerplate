@@ -8,8 +8,10 @@
 import UIKit
 import Common
 
-final class HomeViewController<ViewModel: HomeViewModel>: BaseViewController<ViewModel> {
+final class HomeViewController: BaseViewController {
 
+    var viewModel: HomeViewModel
+    
     private lazy var signInButton: BaseButton = {
         let button = BaseButton()
         button.setTitle("Sign In", for: .normal)
@@ -18,9 +20,10 @@ final class HomeViewController<ViewModel: HomeViewModel>: BaseViewController<Vie
         return button
     }()
     
-    override init(viewModel: ViewModel) {
-        super.init(viewModel: viewModel)
-        viewModel.viewDelegate = self
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel.viewDelegate = self
     }
     
     required init?(coder: NSCoder) {
