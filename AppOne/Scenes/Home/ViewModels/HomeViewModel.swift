@@ -20,7 +20,7 @@ protocol HomeViewModelViewDelegate: BaseViewModelViewDelegate { }
 
 // MARK: - View Model
 
-protocol HomeViewModel {
+protocol HomeViewModel: BaseViewModel {
     var viewDelegate: HomeViewModelViewDelegate? { get set }
     var secondaryViewModel: any SecondaryViewModel { get }
     
@@ -29,7 +29,7 @@ protocol HomeViewModel {
 
 // MARK: - View Model Implementation
 
-final class HomeViewModelImplementation<Dependeincies: AppDependencies>: HomeViewModel, BaseViewModel {
+final class HomeViewModelImplementation<Dependeincies: AppDependencies>: HomeViewModel, WithDependencies {
 
     weak var viewDelegate: HomeViewModelViewDelegate?
     let dependencies: Dependeincies

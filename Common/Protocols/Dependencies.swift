@@ -25,3 +25,11 @@ open class CommonDependencies: Dependencies {
     
     public init() { }
 }
+
+// MARK: - Protocol for conforming View Models Implementations
+
+public protocol WithDependencies: AnyObject {
+    associatedtype D: Dependencies
+    
+    var dependencies: D { get }
+}

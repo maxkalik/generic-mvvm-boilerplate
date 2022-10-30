@@ -35,6 +35,8 @@ final class HomeViewController: BaseViewController {
         
         view.backgroundColor = .orange
         setupViews()
+        
+        viewModel.viewDidLoad()
     }
     
     private func setupViews() {

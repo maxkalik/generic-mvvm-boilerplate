@@ -8,12 +8,16 @@
 import Foundation
 
 public protocol BaseViewModel: AnyObject {
-    associatedtype D: Dependencies
-    
-    var dependencies: D { get }
+
     var viewDelegate: BaseViewModelViewDelegate? { get set }
 
-    func someCommonServiceMethod()
+    func getData()
+    func prepareViewModel()
+    func viewDidLoad()
+    func viewWillAppear()
+    func viewDidAppear()
+    func viewWillDisappear()
+    func viewDidDisappear()
 }
 
 public extension BaseViewModel {
@@ -23,8 +27,39 @@ public extension BaseViewModel {
         set {}
     }
     
+    func getData() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+    
+    func prepareViewModel() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+    
+    func viewDidLoad() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+    
+    func viewWillAppear() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+    
+    func viewDidAppear() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+    
+    func viewWillDisappear() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+    
+    func viewDidDisappear() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+}
+
+// MARK: - WithDependencies protocol
+
+public extension BaseViewModel where Self: WithDependencies {
     func someCommonServiceMethod() {
         dependencies.commonServiceTwo.commonServiceTwoMethod()
     }
 }
-
