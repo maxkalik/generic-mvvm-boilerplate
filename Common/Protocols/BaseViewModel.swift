@@ -26,7 +26,7 @@ public extension BaseViewModel {
         get { nil }
         set {}
     }
-    
+
     func getData() {
         assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
     }
@@ -53,6 +53,12 @@ public extension BaseViewModel {
     
     func viewDidDisappear() {
         assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+}
+
+public extension BaseViewModel {
+    func baseViewModelMethod() {
+        print("== BaseViewModel method fired")
     }
 }
 

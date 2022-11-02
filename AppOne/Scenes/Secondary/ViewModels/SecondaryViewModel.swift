@@ -34,6 +34,15 @@ final class SecondaryViewModelImplementation<Dependeincies: HasAppServiceOne & H
     
     init(dependencies: Dependeincies) {
         self.dependencies = dependencies
+        prepareViewModel()
+    }
+    
+    deinit {
+        print("DEINIT \(self)")
+    }
+    
+    func prepareViewModel() {
+        self.dependencies.appServiceTwo.appServiceTwoMethod()
     }
     
     func viewDidLoad() {

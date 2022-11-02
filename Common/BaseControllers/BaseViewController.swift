@@ -7,10 +7,22 @@
 
 import UIKit
 
-open class BaseViewController: UIViewController, BaseController {
+open class BaseViewController<ViewModel: BaseViewModel>: UIViewController, BaseController {
     
     public lazy var progressView = ProgressView()
+    public var viewModel: ViewModel
+    
+    public init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
 
+        self.viewModel.baseViewModelMethod()
+    }
+    
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     deinit {
         print("DEINIT \(self)")
     }

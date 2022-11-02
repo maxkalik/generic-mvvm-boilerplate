@@ -5,12 +5,16 @@
 //  Created by Maksim Kalik on 10/16/22.
 //
 
-import Foundation
+import UIKit
 import Common
 
-import UIKit
+protocol AppCoordinator: Coordinator {
+    
+}
 
-final class AppCoordinator<Dependencies: AppDependencies>: Coordinator {
+// MARK: - Coordinator Implementation
+
+final class AppCoordinatorImplementation<Dependencies: AppDependencies>: AppCoordinator, WithDependencies {
     
     var navigationController: BaseNavigationController?
     let dependencies: Dependencies
@@ -40,7 +44,7 @@ final class AppCoordinator<Dependencies: AppDependencies>: Coordinator {
 
 // MARK: - HomeViewModelCoordinatorDelegate
 
-extension AppCoordinator: HomeViewModelCoordinatorDelegate {
+extension AppCoordinatorImplementation: HomeViewModelCoordinatorDelegate {
     func homeViewModelShouldShowSecondary<ViewModel>(_ viewModel: ViewModel) where ViewModel : HomeViewModel {
         self.showSecondary()
     }

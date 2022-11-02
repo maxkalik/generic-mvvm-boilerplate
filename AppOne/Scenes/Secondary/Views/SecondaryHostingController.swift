@@ -8,14 +8,12 @@
 import SwiftUI
 import Common
 
-final class SecondaryHostingController<ViewModel: SecondaryViewModel>: BaseHostingController<SecondaryView<ViewModel>> {
+final class SecondaryHostingController<ViewModel: SecondaryViewModel>:
+    BaseHostingController<ViewModel, SecondaryView<ViewModel>> {
 
-    private let viewModel: ViewModel
-    
     init(viewModel: ViewModel) {
-        self.viewModel = viewModel
         let rootView = SecondaryView(viewModel: viewModel)
-        super.init(rootView: rootView)
+        super.init(viewModel: viewModel, rootView: rootView)
         viewModel.viewDelegate = self
     }
     
@@ -29,8 +27,10 @@ final class SecondaryHostingController<ViewModel: SecondaryViewModel>: BaseHosti
     }
 }
 
+// MARK: - SecondaryViewModelViewDelegate
+
 extension SecondaryHostingController: SecondaryViewModelViewDelegate {
     func secondaryViewModelMethod<ViewModel>(_ viewModel: ViewModel) where ViewModel : SecondaryViewModel {
-        print(#function)
+        print("== \(#function)")
     }
 }

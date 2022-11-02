@@ -8,10 +8,8 @@
 import UIKit
 import Common
 
-final class HomeViewController: BaseViewController {
+final class HomeViewController<ViewModel: HomeViewModel>: BaseViewController<ViewModel> {
 
-    var viewModel: HomeViewModel
-    
     private lazy var signInButton: BaseButton = {
         let button = BaseButton()
         button.setTitle("Sign In", for: .normal)
@@ -20,10 +18,9 @@ final class HomeViewController: BaseViewController {
         return button
     }()
     
-    init(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-        self.viewModel.viewDelegate = self
+    override init(viewModel: ViewModel) {
+        super.init(viewModel: viewModel)
+        viewModel.viewDelegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -35,8 +32,6 @@ final class HomeViewController: BaseViewController {
         
         view.backgroundColor = .orange
         setupViews()
-        
-        viewModel.viewDidLoad()
     }
     
     private func setupViews() {

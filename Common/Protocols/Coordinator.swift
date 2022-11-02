@@ -8,8 +8,6 @@
 import UIKit
 
 public protocol Coordinator: AnyObject {
-    associatedtype D: Dependencies
-    var dependencies: D { get }
     
     var navigationController: BaseNavigationController? { get }
 
@@ -18,10 +16,6 @@ public protocol Coordinator: AnyObject {
 }
 
 public extension Coordinator {
-    func extensionTestMethod() {
-        dependencies.commonServiceOne.commonServiceOneMethod()
-    }
-    
     func show<ViewController: UIViewController>(_ viewController: ViewController) {
         self.navigationController?.pushViewController(viewController, animated: true)
     }

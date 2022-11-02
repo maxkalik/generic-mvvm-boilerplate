@@ -20,6 +20,6 @@ final class CommonServiceTwoImpementation: CommonServiceTwo {
     }
 
     func commonServiceTwoMethod() {
-        print("Common Service Two method fired")
+        print("== Common Service 2 method fired")
     }
 }
