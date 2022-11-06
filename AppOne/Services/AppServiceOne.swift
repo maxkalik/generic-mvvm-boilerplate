@@ -13,13 +13,13 @@ protocol AppServiceOne {
 
 final class AppServiceOneImplementation: AppServiceOne {
 
-    private var dependencies: AppDependencies
+    private let dependencies: AppDependencies
 
     init(dependencies: AppDependencies) {
         self.dependencies = dependencies
     }
 
     func appServiceOneMethod() {
-        print("App Service One method fired")
+        print("== App Service 1 method fired")
     }
 }

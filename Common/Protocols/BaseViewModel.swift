@@ -8,18 +8,16 @@
 import Foundation
 
 public protocol BaseViewModel: AnyObject {
-    associatedtype D: Dependencies
-    
-    var dependencies: D { get }
+
     var viewDelegate: BaseViewModelViewDelegate? { get set }
-        
+
+    func getData()
+    func prepareViewModel()
     func viewDidLoad()
     func viewWillAppear()
-    func viewWillDisapear()
     func viewDidAppear()
+    func viewWillDisappear()
     func viewDidDisappear()
-    
-    func someCommonServiceMethod()
 }
 
 public extension BaseViewModel {
@@ -28,30 +26,46 @@ public extension BaseViewModel {
         get { nil }
         set {}
     }
-    
-    func someCommonServiceMethod() {
-        dependencies.commonServiceTwo.commonServiceTwoMethod()
-    }
-}
 
-public extension BaseViewModel {
+    func getData() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+    
+    func prepareViewModel() {
+        assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+    
     func viewDidLoad() {
         assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
     }
-
+    
     func viewWillAppear() {
         assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
     }
     
-    func viewWillDisapear() {
+    func viewDidAppear() {
         assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
     }
-
-    func viewDidAppear() {
+    
+    func viewWillDisappear() {
         assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
     }
     
     func viewDidDisappear() {
         assertionFailure("WARNING: '\(#function) method should be implemented in \(String(describing: type(of: self)))")
+    }
+}
+
+public extension BaseViewModel {
+    func baseViewModelMethod() {
+        print("== BaseViewModel method fired")
+    }
+}
+
+// MARK: - WithDependencies protocol
+
+public extension BaseViewModel where Self: WithDependencies {
+    func someCommonServiceMethod() {
+        dependencies.commonServiceTwo.commonServiceTwoMethod()
     }
 }

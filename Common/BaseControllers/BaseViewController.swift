@@ -15,6 +15,8 @@ open class BaseViewController<ViewModel: BaseViewModel>: UIViewController, BaseC
     public init(viewModel: ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+
+        self.viewModel.baseViewModelMethod()
     }
     
     required public init?(coder: NSCoder) {

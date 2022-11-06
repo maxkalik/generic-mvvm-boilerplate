@@ -27,8 +27,10 @@ final class SecondaryHostingController<ViewModel: SecondaryViewModel>:
     }
 }
 
+// MARK: - SecondaryViewModelViewDelegate
+
 extension SecondaryHostingController: SecondaryViewModelViewDelegate {
-    func secondaryViewModelMethod<ViewModel>(_ viewModel: ViewModel) where ViewModel : SecondaryViewModel {
-        print(#function)
+    func secondaryViewModelMethod<ViewModel: SecondaryViewModel>(_ viewModel: ViewModel) {
+        view.backgroundColor = .orange
     }
 }

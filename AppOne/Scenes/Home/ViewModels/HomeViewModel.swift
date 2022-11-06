@@ -22,28 +22,34 @@ protocol HomeViewModelViewDelegate: BaseViewModelViewDelegate { }
 
 protocol HomeViewModel: BaseViewModel {
     var viewDelegate: HomeViewModelViewDelegate? { get set }
-    var secondaryViewModel: any SecondaryViewModel { get }
     
     func buttonTap()
 }
 
 // MARK: - View Model Implementation
 
-final class HomeViewModelImplementation<Dependeincies: AppDependencies>: HomeViewModel {
+final class HomeViewModelImplementation<Dependeincies: AppDependencies>: HomeViewModel, WithDependencies {
 
     weak var viewDelegate: HomeViewModelViewDelegate?
-    var dependencies: Dependeincies
+    let dependencies: Dependeincies
     var coordinatorDelegate: HomeViewModelCoordinatorDelegate?
-    var secondaryViewModel: any SecondaryViewModel
     
     init(dependencies: Dependeincies) {
         self.dependencies = dependencies
-        self.secondaryViewModel = SecondaryViewModelImplementation(dependencies: dependencies)
+        prepareViewModel()
+    }
+    
+    deinit {
+        print("DEINIT \(self)")
+    }
+    
+    func prepareViewModel() {
+        self.someCommonServiceMethod()
+        self.dependencies.appServiceOne.appServiceOneMethod()        
     }
     
     func buttonTap() {
         self.viewDelegate?.viewModelShowActivityIndicator(self)
-        self.someCommonServiceMethod()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
             guard let self = self else { return }
             self.viewDelegate?.viewModelHideActivityIndicator(self)
