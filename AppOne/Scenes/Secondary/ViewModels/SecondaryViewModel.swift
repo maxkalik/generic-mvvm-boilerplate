@@ -17,9 +17,11 @@ protocol SecondaryViewModelViewDelegate: BaseViewModelViewDelegate {
 // MARK: - View Model
 
 protocol SecondaryViewModel: ObservableObject, BaseViewModel {
-    var title: String { get }
     
+    var title: String { get }
     var viewDelegate: SecondaryViewModelViewDelegate? { get set }
+    
+    func buttonTap()
 }
 
 // MARK: - View Model Implementation
@@ -30,7 +32,7 @@ final class SecondaryViewModelImplementation<Dependeincies: HasAppServiceOne & H
     
     @Published var title: String = ""
     
-    var dependencies: Dependeincies
+    let dependencies: Dependeincies
     
     init(dependencies: Dependeincies) {
         self.dependencies = dependencies
@@ -53,5 +55,9 @@ final class SecondaryViewModelImplementation<Dependeincies: HasAppServiceOne & H
             self.viewDelegate?.viewModelHideActivityIndicator(self)
             self.viewDelegate?.secondaryViewModelMethod(self)
         }
+    }
+    
+    func buttonTap() {
+        print("***")
     }
 }

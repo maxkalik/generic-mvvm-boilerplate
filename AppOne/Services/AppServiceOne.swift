@@ -13,7 +13,7 @@ protocol AppServiceOne {
 
 final class AppServiceOneImplementation: AppServiceOne {
 
-    private var dependencies: AppDependencies
+    private let dependencies: AppDependencies
 
     init(dependencies: AppDependencies) {
         self.dependencies = dependencies

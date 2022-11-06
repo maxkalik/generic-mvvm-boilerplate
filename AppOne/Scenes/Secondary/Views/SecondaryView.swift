@@ -12,6 +12,10 @@ struct SecondaryView<ViewModel: SecondaryViewModel>: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        Text(viewModel.title)
+        Button {
+            viewModel.buttonTap()
+        } label: {
+            Text(viewModel.title)
+        }
     }
 }

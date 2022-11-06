@@ -45,7 +45,7 @@ final class AppCoordinatorImplementation<Dependencies: AppDependencies>: AppCoor
 // MARK: - HomeViewModelCoordinatorDelegate
 
 extension AppCoordinatorImplementation: HomeViewModelCoordinatorDelegate {
-    func homeViewModelShouldShowSecondary<ViewModel>(_ viewModel: ViewModel) where ViewModel : HomeViewModel {
+    func homeViewModelShouldShowSecondary<ViewModel: HomeViewModel>(_ viewModel: ViewModel) {
         self.showSecondary()
     }
 }
